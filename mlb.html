@@ -1,0 +1,78 @@
+<script>
+  var MajorLeagueBaseball = function() {
+    this.brieffHistory = function() {
+      alert("Since " + this.firstYear + ", the " + this.teamName + " have won the:\n\n" +
+            this.league + " " + this.division +  ": " + this.divisionsWon + " time(s)\n" +
+            this.league + " Pennant: " + this.pennantsWon + " time(s)\n" +
+            "The World Series: " + this.worldSeriesWon + " time(s)");
+    };
+  };
+
+  var mlb = new MajorLeagueBaseball();
+  mlb.americanLeague = [americanLeagueWest, americanLeagueCentral, americanLeagueEast];
+  mlb.nationalLeague = [nationalLeagueWest, nationalLeagueCentral, nationalLeagueEast];
+
+  var AmericanLeague = function(division, teamName, shortName, teamCity, firstYear, divisionsWon, pennantsWon, worldSeriesWon) {
+    this.league = "American League";
+    this.division = division;
+    this.teamName = teamName;
+    this.shortName = shortName;
+    this.teamCity = teamCity;
+    this.firstYear= firstYear;
+    this.divisionsWon = divisionsWon;
+    this.pennantsWon = pennantsWon;
+    this.worldSeriesWon = worldSeriesWon;
+  };
+  AmericanLeague.prototype = new MajorLeagueBaseball();
+
+  var NationalLeague = function(division, teamName, shortName, teamCity, firstYear, divisionsWon, pennantsWon, worldSeriesWon) {
+    this.league = "National League";
+    this.division = "West";
+    this.teamName = teamName;
+    this.shortName = shortName;
+    this.teamCity = teamCity;
+    this.firstYear= firstYear;
+    this.divisionsWon = divisionsWon;
+    this.pennantsWon = pennantsWon;
+    this.worldSeriesWon = worldSeriesWon;
+  };
+  NationalLeague.prototype = new MajorLeagueBaseball();
+
+  var seattleMariners = new AmericanLeague("West", "Seattle Mariners","M's", "Seattle",  1977, 3, 0, 0),
+      oaklandAthletics = new AmericanLeague("West", "Oakland Athletics", "A's", "Oakland", 1968, 16, 15, 9),
+      texasRangers = new AmericanLeague("West", "Texas Rangers", "Rangers", "Arlington", 1972, 5, 2, 0),
+      houstonAstros = new AmericanLeague("West", "Houston Astros", "Astros", "Houston", 1965, 7, 1, 0),
+      laAngels = new AmericanLeague("West", "Los Angeles Angels", "Halos", "Anaheim", 1961, 9, 1, 1);
+  var detroitTigers = new AmericanLeague("Central", "Detroit Tigers", "Tigers", "Detroit"),
+      kansasCityRoyals = new AmericanLeague("Central", "Kansas City Royals", "Royals", "Kansas City"),
+      minnesotaTwins = new AmericanLeague("Central", "Minnesota Twins", "Twins", "Minneapolis"),
+      chicagoWhiteSoxs = new AmericanLeague("Central", "Chicago White Sox", "White Soxs", "Chicago"),
+      clevelandIndians = new AmericanLeague("Central", "Cleveland Indians", "Tribe", "Cleveland");
+  var newYorkYankees = new AmericanLeague("East", "New York Yankees", "Yankees", "New York"),
+      torontoBlueJays = new AmericanLeague("East", "Toronto Blue Jays", "Blue Jays", "Toronto"),
+      baltimoreOrioles = new AmericanLeague("East", "Baltimore Orioles", "Orioles", "Baltimore"),
+      bostonRedSoxs = new AmericanLeague("East", "Boston Red Sox", "Red Sox", "Boston"),
+      tampaBayRays = new AmericanLeague("East", "Tampa Bay Rays", "Rays", "Tampa Bay");
+  var losAngelesDodgers = new NationalLeague("West", "Los Angeles Dodgers", "Dodgers", "Los Angeles"),
+      sanFranciscoGiants = new NationalLeague("West", "San Francisco Giants", "Giants", "San Francisco"),
+      sanDiegoPadres = new NationalLeague("West", "San Diego Padres", "Friars", "San Diego"),
+      arizonaDaimondbacks = new NationalLeague("West", "Arizona Diamondbacks", "Diamondbacks", "Phoenix"),
+      coloradoRockies = new NationalLeague("West", "Colorado Rockies", "Rockies", "Denver");
+  var stLouisCardinals = new NationalLeague("Central", "St. Louis Cardinals", "Cardinals", "St. Louis"),
+      pittsburghPirates = new NationalLeague("Central", "Pittsburgh Pirates", "Bucs", "Pittsburgh"),
+      milwaukeeBrewers = new NationalLeague("Central", "Milwaukee Brewers", "Brew Crew", "Milwaukee"),
+      cincinattiReds = new NationalLeague("Central", "Cincinatee Reds", "Reds", "Cincinatee"),
+      chicagoCubs = new NationalLeague("Central", "Chicago Cubs", "Cubbies", "Chicago");
+  var washingtonNationals = new NationalLeague("East", "Washington Nationals", "Nats", "Washington D.C."),
+      atlantaBraves = new NationalLeague("East", "Atlanta Braves", "Braves", "Atlanta"),
+      miamiMarlins = new NationalLeague("East", "Miami Marlins", "Marlins", "Miami"),
+      newYorkMets = new NationalLeague("East", "New York Mets", "Mets", "New York"),
+      philadelphiaPhillies = new NationalLeague("East", "Philadelphia Phillies", "Phillies", "Philadelphia");
+
+  var americanLeagueWest = [seattleMariners,oaklandAthletics, laAngels, texasRangers, houstonAstros];
+  var americanLeagueCentral = [detroitTigers, kansasCityRoyals, chicagoWhiteSoxs, clevelandIndians, minnesotaTwins];
+  var americanLeagueEast = [bostonRedSoxs, newYorkYankees, torontoBlueJays, tampaBayRays, baltimoreOrioles];
+  var nationalLeagueWest = [losAngelesDodgers, sanFranciscoGiants,sanDiegoPadres, arizonaDaimondbacks, coloradoRockies];
+  var nationalLeagueCentral = [stLouisCardinals, milwaukeeBrewers, cincinattiReds, chicagoCubs, pittsburghPirates];
+  var nationalLeagueEast = [washingtonNationals, atlantaBraves, newYorkMets, miamiMarlins, philadelphiaPhillies];
+</script>
