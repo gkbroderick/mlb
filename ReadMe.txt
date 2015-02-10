@@ -4,8 +4,8 @@ As of, 2/10/15, I've covered the AL West: Mariners, Athletics, Rangers, Astros, 
 
 The numbers for stats and dates have all been sourced from Wikipedia.
 
-Methods:
-  Inherited from MajorLeagueBaseball prototype:
-  briefHistory() = states how many times a given team has won their division, the Pennant, and The World Series.
+Methods inherited from MajorLeagueBaseball prototype:
+  briefHistory() = states how many times a given team has won their division, the Pennant, and The World Series
+  (still trying to come up with more funcationality).
 
 From the work I've done so far I've realized how immensely objects can increase the scope of a program. I've also learned that working with objects can lead you down a rabbithole and that you have to focus on what the objects are directly responsible for (objects within objects within objects...ugh). This assignment has been helpful with Git too. It's first time I've had to actually make a new branch for one of my own repos.
