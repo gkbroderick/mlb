@@ -9,11 +9,11 @@
   };
 
   var mlb = new MajorLeagueBaseball();
-  mlb.americanLeague = [americanLeagueWest, americanLeagueCentral, americanLeagueEast];
-  mlb.nationalLeague = [nationalLeagueWest, nationalLeagueCentral, nationalLeagueEast];
+  mlb.americanLeague = [americanWest, americanCentral, americanEast];
+  mlb.nationalLeague = [nationalWest, nationalCentral, nationalEast];
 
-  var AmericanLeague = function(division, teamName, shortName, teamCity, firstYear, divisionsWon, pennantsWon, worldSeriesWon) {
-    this.league = "American League";
+  var MlbTeam = function(league, division, teamName, shortName, teamCity, firstYear, divisionsWon, pennantsWon, worldSeriesWon) {
+    this.league = league;
     this.division = division;
     this.teamName = teamName;
     this.shortName = shortName;
@@ -23,56 +23,43 @@
     this.pennantsWon = pennantsWon;
     this.worldSeriesWon = worldSeriesWon;
   };
-  AmericanLeague.prototype = new MajorLeagueBaseball();
+  MlbTeam.prototype = new MajorLeagueBaseball();
 
-  var NationalLeague = function(division, teamName, shortName, teamCity, firstYear, divisionsWon, pennantsWon, worldSeriesWon) {
-    this.league = "National League";
-    this.division = "West";
-    this.teamName = teamName;
-    this.shortName = shortName;
-    this.teamCity = teamCity;
-    this.firstYear= firstYear;
-    this.divisionsWon = divisionsWon;
-    this.pennantsWon = pennantsWon;
-    this.worldSeriesWon = worldSeriesWon;
-  };
-  NationalLeague.prototype = new MajorLeagueBaseball();
+  var seattleMariners = new MlbTeam("American League", "West", "Seattle Mariners","M's", "Seattle",  1977, 3, 0, 0),
+      oaklandAthletics = new MlbTeam("American League", "West", "Oakland Athletics", "A's", "Oakland", 1968, 16, 15, 9),
+      texasRangers = new MlbTeam("American League", "West", "Texas Rangers", "Rangers", "Arlington", 1972, 5, 2, 0),
+      houstonAstros = new MlbTeam("American League", "West", "Houston Astros", "Astros", "Houston", 1965, 7, 1, 0),
+      laAngels = new MlbTeam("American League", "West", "Los Angeles Angels", "Halos", "Anaheim", 1961, 9, 1, 1);
+  var detroitTigers = new MlbTeam("American League", "Central", "Detroit Tigers", "Tigers", "Detroit"),
+      kansasCityRoyals = new MlbTeam("American League", "Central", "Kansas City Royals", "Royals", "Kansas City"),
+      minnesotaTwins = new MlbTeam("American League", "Central", "Minnesota Twins", "Twins", "Minneapolis"),
+      chicagoWhiteSoxs = new MlbTeam("American League", "Central", "Chicago White Sox", "White Soxs", "Chicago"),
+      clevelandIndians = new MlbTeam("American League", "Central", "Cleveland Indians", "Tribe", "Cleveland");
+  var newYorkYankees = new MlbTeam("American League", "East", "New York Yankees", "Yankees", "New York"),
+      torontoBlueJays = new MlbTeam("American League", "East", "Toronto Blue Jays", "Blue Jays", "Toronto"),
+      baltimoreOrioles = new MlbTeam("American League", "East", "Baltimore Orioles", "Orioles", "Baltimore"),
+      bostonRedSoxs = new MlbTeam("American League", "East", "Boston Red Sox", "Red Sox", "Boston"),
+      tampaBayRays = new MlbTeam("American League", "East", "Tampa Bay Rays", "Rays", "Tampa Bay");
+  var losAngelesDodgers = new MlbTeam("National League", "West", "Los Angeles Dodgers", "Dodgers", "Los Angeles"),
+      sanFranciscoGiants = new MlbTeam("National League", "West", "San Francisco Giants", "Giants", "San Francisco"),
+      sanDiegoPadres = new MlbTeam("National League", "West", "San Diego Padres", "Friars", "San Diego"),
+      arizonaDaimondbacks = new MlbTeam("National League", "West", "Arizona Diamondbacks", "Diamondbacks", "Phoenix"),
+      coloradoRockies = new MlbTeam("National League", "West", "Colorado Rockies", "Rockies", "Denver");
+  var stLouisCardinals = new MlbTeam("National League", "Central", "St. Louis Cardinals", "Cardinals", "St. Louis"),
+      pittsburghPirates = new MlbTeam("National League", "Central", "Pittsburgh Pirates", "Bucs", "Pittsburgh"),
+      milwaukeeBrewers = new MlbTeam("National League", "Central", "Milwaukee Brewers", "Brew Crew", "Milwaukee"),
+      cincinattiReds = new MlbTeam("National League", "Central", "Cincinatee Reds", "Reds", "Cincinatee"),
+      chicagoCubs = new MlbTeam("National League", "Central", "Chicago Cubs", "Cubbies", "Chicago");
+  var washingtonNationals = new MlbTeam("National League", "East", "Washington Nationals", "Nats", "Washington D.C."),
+      atlantaBraves = new MlbTeam("National League", "East", "Atlanta Braves", "Braves", "Atlanta"),
+      miamiMarlins = new MlbTeam("National League", "East", "Miami Marlins", "Marlins", "Miami"),
+      newYorkMets = new MlbTeam("National League", "East", "New York Mets", "Mets", "New York"),
+      philadelphiaPhillies = new MlbTeam("National League", "East", "Philadelphia Phillies", "Phillies", "Philadelphia");
 
-  var seattleMariners = new AmericanLeague("West", "Seattle Mariners","M's", "Seattle",  1977, 3, 0, 0),
-      oaklandAthletics = new AmericanLeague("West", "Oakland Athletics", "A's", "Oakland", 1968, 16, 15, 9),
-      texasRangers = new AmericanLeague("West", "Texas Rangers", "Rangers", "Arlington", 1972, 5, 2, 0),
-      houstonAstros = new AmericanLeague("West", "Houston Astros", "Astros", "Houston", 1965, 7, 1, 0),
-      laAngels = new AmericanLeague("West", "Los Angeles Angels", "Halos", "Anaheim", 1961, 9, 1, 1);
-  var detroitTigers = new AmericanLeague("Central", "Detroit Tigers", "Tigers", "Detroit"),
-      kansasCityRoyals = new AmericanLeague("Central", "Kansas City Royals", "Royals", "Kansas City"),
-      minnesotaTwins = new AmericanLeague("Central", "Minnesota Twins", "Twins", "Minneapolis"),
-      chicagoWhiteSoxs = new AmericanLeague("Central", "Chicago White Sox", "White Soxs", "Chicago"),
-      clevelandIndians = new AmericanLeague("Central", "Cleveland Indians", "Tribe", "Cleveland");
-  var newYorkYankees = new AmericanLeague("East", "New York Yankees", "Yankees", "New York"),
-      torontoBlueJays = new AmericanLeague("East", "Toronto Blue Jays", "Blue Jays", "Toronto"),
-      baltimoreOrioles = new AmericanLeague("East", "Baltimore Orioles", "Orioles", "Baltimore"),
-      bostonRedSoxs = new AmericanLeague("East", "Boston Red Sox", "Red Sox", "Boston"),
-      tampaBayRays = new AmericanLeague("East", "Tampa Bay Rays", "Rays", "Tampa Bay");
-  var losAngelesDodgers = new NationalLeague("West", "Los Angeles Dodgers", "Dodgers", "Los Angeles"),
-      sanFranciscoGiants = new NationalLeague("West", "San Francisco Giants", "Giants", "San Francisco"),
-      sanDiegoPadres = new NationalLeague("West", "San Diego Padres", "Friars", "San Diego"),
-      arizonaDaimondbacks = new NationalLeague("West", "Arizona Diamondbacks", "Diamondbacks", "Phoenix"),
-      coloradoRockies = new NationalLeague("West", "Colorado Rockies", "Rockies", "Denver");
-  var stLouisCardinals = new NationalLeague("Central", "St. Louis Cardinals", "Cardinals", "St. Louis"),
-      pittsburghPirates = new NationalLeague("Central", "Pittsburgh Pirates", "Bucs", "Pittsburgh"),
-      milwaukeeBrewers = new NationalLeague("Central", "Milwaukee Brewers", "Brew Crew", "Milwaukee"),
-      cincinattiReds = new NationalLeague("Central", "Cincinatee Reds", "Reds", "Cincinatee"),
-      chicagoCubs = new NationalLeague("Central", "Chicago Cubs", "Cubbies", "Chicago");
-  var washingtonNationals = new NationalLeague("East", "Washington Nationals", "Nats", "Washington D.C."),
-      atlantaBraves = new NationalLeague("East", "Atlanta Braves", "Braves", "Atlanta"),
-      miamiMarlins = new NationalLeague("East", "Miami Marlins", "Marlins", "Miami"),
-      newYorkMets = new NationalLeague("East", "New York Mets", "Mets", "New York"),
-      philadelphiaPhillies = new NationalLeague("East", "Philadelphia Phillies", "Phillies", "Philadelphia");
-
-  var americanLeagueWest = [seattleMariners,oaklandAthletics, laAngels, texasRangers, houstonAstros];
-  var americanLeagueCentral = [detroitTigers, kansasCityRoyals, chicagoWhiteSoxs, clevelandIndians, minnesotaTwins];
-  var americanLeagueEast = [bostonRedSoxs, newYorkYankees, torontoBlueJays, tampaBayRays, baltimoreOrioles];
-  var nationalLeagueWest = [losAngelesDodgers, sanFranciscoGiants,sanDiegoPadres, arizonaDaimondbacks, coloradoRockies];
-  var nationalLeagueCentral = [stLouisCardinals, milwaukeeBrewers, cincinattiReds, chicagoCubs, pittsburghPirates];
-  var nationalLeagueEast = [washingtonNationals, atlantaBraves, newYorkMets, miamiMarlins, philadelphiaPhillies];
+  var americanWest = [seattleMariners,oaklandAthletics, laAngels, texasRangers, houstonAstros];
+  var americanCentral = [detroitTigers, kansasCityRoyals, chicagoWhiteSoxs, clevelandIndians, minnesotaTwins];
+  var americanEast = [bostonRedSoxs, newYorkYankees, torontoBlueJays, tampaBayRays, baltimoreOrioles];
+  var nationalWest = [losAngelesDodgers, sanFranciscoGiants,sanDiegoPadres, arizonaDaimondbacks, coloradoRockies];
+  var nationalCentral = [stLouisCardinals, milwaukeeBrewers, cincinattiReds, chicagoCubs, pittsburghPirates];
+  var nationalEast = [washingtonNationals, atlantaBraves, newYorkMets, miamiMarlins, philadelphiaPhillies];
 </script>
