@@ -1,16 +1,5 @@
 <script>
-  var MajorLeagueBaseball = function() {
-    this.brieffHistory = function() {
-      alert("Since " + this.firstYear + ", the " + this.teamName + " have won the:\n\n" +
-            this.league + " " + this.division +  ": " + this.divisionsWon + " time(s)\n" +
-            this.league + " Pennant: " + this.pennantsWon + " time(s)\n" +
-            "The World Series: " + this.worldSeriesWon + " time(s)");
-    };
-  };
-
-  var mlb = new MajorLeagueBaseball();
-  mlb.americanLeague = [americanWest, americanCentral, americanEast];
-  mlb.nationalLeague = [nationalWest, nationalCentral, nationalEast];
+  var mlb = {};
 
   var MlbTeam = function(league, division, teamName, shortName, teamCity, firstYear, divisionsWon, pennantsWon, worldSeriesWon) {
     this.league = league;
@@ -22,8 +11,13 @@
     this.divisionsWon = divisionsWon;
     this.pennantsWon = pennantsWon;
     this.worldSeriesWon = worldSeriesWon;
-  };
-  MlbTeam.prototype = new MajorLeagueBaseball();
+    this.brieffHistory = function() {
+      alert("Since " + this.firstYear + ", the " + this.teamName + " have won the:\n\n" +
+            this.league + " " + this.division +  ": " + this.divisionsWon + " time(s)\n" +
+            this.league + " Pennant: " + this.pennantsWon + " time(s)\n" +
+            "The World Series: " + this.worldSeriesWon + " time(s)");
+      };
+    };
 
   var seattleMariners = new MlbTeam("American League", "West", "Seattle Mariners","M's", "Seattle",  1977, 3, 0, 0),
       oaklandAthletics = new MlbTeam("American League", "West", "Oakland Athletics", "A's", "Oakland", 1968, 16, 15, 9),
@@ -62,4 +56,16 @@
       nationalWest = [losAngelesDodgers, sanFranciscoGiants,sanDiegoPadres, arizonaDaimondbacks, coloradoRockies],
       nationalCentral = [stLouisCardinals, milwaukeeBrewers, cincinattiReds, chicagoCubs, pittsburghPirates],
       nationalEast = [washingtonNationals, atlantaBraves, newYorkMets, miamiMarlins, philadelphiaPhillies];
+
+  mlb.americanLeague = [americanWest, americanCentral, americanEast];
+  mlb.nationalLeague = [nationalWest, nationalCentral, nationalEast];
+  mlb.leagueTeams = function(x) {
+    var msg = "";
+    for(var i = 0; i < x.length; i++) {
+      for(var j = 0; j < x[i].length; j++) {
+      msg += x[i][j].teamName + "\n";
+      }
+    }
+    alert(msg);
+  };
 </script>
