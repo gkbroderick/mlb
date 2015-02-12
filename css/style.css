@@ -1,0 +1,117 @@
+body {
+  background-color: black;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  letter-spacing: .05em;
+}
+
+/* Header */
+
+header {
+  background-color: white;
+  color: black;
+  width: 100%;
+  padding: .5em 0 .5em 3em;
+  font-size: .8em;
+}
+span {
+  color: #a7a8aa;
+}
+
+/* Main Sections */
+
+#division,
+#pennant,
+#series {
+  width: 90%;
+  padding: 3em 3em 0 3em;
+  clear: both;
+  line-height: 1.5em;
+}
+#division h2,
+#division p,
+#series h2,
+#series p {
+  width: 45%;
+}
+#pennant h2,
+#pennant p {
+  float: right;
+  width: 45%;
+}
+img.align-right {
+  height: 25em;
+  width: 30em;
+  border-radius: 1%;
+  float: right;
+  margin-right: 3em;
+  position: relative;
+  top: 4.5em;
+}
+img.align-left {
+  height: 30em;
+  width: 30em;
+  border-radius: 1%;
+  float: left;
+  position: relative;
+  top: 2em;
+}
+
+/* Main Form */
+
+#pics {
+  width: 90%;
+  padding: 3em 3em 0 3em;
+}
+
+form {
+  width: 20%;
+  float: right;
+  padding: 10em;
+}
+figure img {
+  height: 25em;
+  width: 30em;
+  clear: both;
+}
+figcaption {
+  width: 30em;
+  clear: both;
+}
+
+/* Footer */
+
+footer {
+  background-color: white;
+  color: #a7a8aa;
+  width: 100%;
+  padding: .75em 0 1em 0;
+  margin-top: 4em;
+  font-size: .8em;
+}
+footer span {
+  color: black;
+}
+footer h4 {
+  width: 50%;
+  margin-left: 2em;
+  clear: both;
+
+}
+footer li {
+  display: inline;
+  list-style: none;
+  margin-right: 2em;
+  float: right;
+  position: relative;
+  bottom: 2.5em;
+}
+footer a {
+  text-decoration: none;
+  color: #a7a8aa;
+}
+footer a:hover {
+  color: black;
+}
+
+
