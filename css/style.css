@@ -27,7 +27,7 @@ span {
   color: #a7a8aa;
 }
 
-/* Main Sections */
+/* Division, Pennant and Series Sections */
 
 #division,
 #pennant,
@@ -53,6 +53,7 @@ img.align-right {
   width: 30em;
   border-radius: 1%;
   float: right;
+  padding-bottom: 2em;
   margin-right: 2.5em;
   position: relative;
   top: 4.5em;
@@ -66,9 +67,9 @@ img.align-left {
   top: 2em;
 }
 
-/* Main Form */
+/* Champions Section */
 
-#pics {
+#champions {
   width: 90%;
   padding: 3em 3em 0 3em;
 }
@@ -77,7 +78,6 @@ img.align-left {
   width: 20%;
   padding-top: 10em;
   float: right;
-  /*margin: 10em 10em 10em 10em;*/
 }
 .before {
   height: 25em;
