@@ -73,6 +73,12 @@ $(document).ready(function() {
     $('.textfield').html(history);
     //alert(searchArray());
   });
+  $('#national').change(function() {
+    id = $("#national option:selected").attr('data-name');
+    var history = searchArray();
+    $('.textfield').html(history);
+    //alert(searchArray());
+  });
 });
 function searchArray() {
   for(var i = 0; i < teamPool.length; i++) {
