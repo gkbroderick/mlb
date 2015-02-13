@@ -31,21 +31,47 @@
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
       </section>
       <section id='pics'>
-
-        <form>
-          <label><q>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</q></label>
-          <select name='team'>
-            <option id='mariners' value='Mariners'>Seattle Mariners</option>
-            <option id='athletics' value='Athletics'>Oakland Athletics</option>
-            <option id='angels' value='Angels'>Los Angeles Angels</option>
-            <option id='astros' value='Astros'>Houston Astros</option>
-            <option id='rangers' value='Rangers'>Texas Rangers</option>
+        <form id='nl'>
+          <label>National League.</label>
+          <select id='american' name='team'>
+            <option id='seattleMariners' data-name='Seattle Mariners' value='Mariners'>Seattle Mariners</option>
+            <option id='oaklandAthletics' data-name='Oakland Athletics' value='Athletics'>Oakland Athletics</option>
+            <option id='laAngels' data-name='Los Angeles Angels' value='Angels'>Los Angeles Angels</option>
+            <option id='houstonAstros' data-name='Houston Astros' value='Astros'>Houston Astros</option>
+            <option id='texasRangers' value='Rangers' data-name='Texas Rangers'>Texas Rangers</option>
+            <option data-name='Detroit Tigers' value='Tigers'>Detroit Tigers</option>
+            <option data-name='Kansas City Royals' value='Royals'>Kansas City Royals</option>
+            <option data-name='Chicago White Sox' value='White Sox'>Chicago White Sox</option>
+            <option data-name='Cleveland Indians' value='Indians'>Cleveland Indians</option>
+            <option data-name='Minnesota Twins' value='Twins'>Minnesota Twins</option>
+            <option data-name='Boston Red Sox' value='Red Sox'>Boston Red Sox</option>
+            <option data-name='New York Yankees' value='Yankees'>New York Yankees</option>
+            <option data-name='Toronto Blue Jays' value='Blue Jays'>Toronto Blue Jays</option>
+            <option data-name='Tampa Bay Rays' value='Rays'>Tampa Bay Rays</option>
+            <option data-name='Baltimore Orioles' value='Orioles'>Baltimore Orioles</option>
           </select>
         </form>
-        <figure>
-          <img src='https://seattlesportsnet.files.wordpress.com/2009/02/griffeyslide.jpg?w=440&h=286' alt='95 slide'>
-          <figcaption><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></figcaption>
-        </figure>
+        <form id='al'>
+          <label>American League.</label>
+          <select id='american' name='team'>
+            <option id='seattleMariners' data-name='Seattle Mariners' value='Mariners'>Seattle Mariners</option>
+            <option id='oaklandAthletics' data-name='Oakland Athletics' value='Athletics'>Oakland Athletics</option>
+            <option id='laAngels' data-name='Los Angeles Angels' value='Angels'>Los Angeles Angels</option>
+            <option id='houstonAstros' data-name='Houston Astros' value='Astros'>Houston Astros</option>
+            <option id='texasRangers' value='Rangers' data-name='Texas Rangers'>Texas Rangers</option>
+            <option data-name='Detroit Tigers' value='Tigers'>Detroit Tigers</option>
+            <option data-name='Kansas City Royals' value='Royals'>Kansas City Royals</option>
+            <option data-name='Chicago White Sox' value='White Sox'>Chicago White Sox</option>
+            <option data-name='Cleveland Indians' value='Indians'>Cleveland Indians</option>
+            <option data-name='Minnesota Twins' value='Twins'>Minnesota Twins</option>
+            <option data-name='Boston Red Sox' value='Red Sox'>Boston Red Sox</option>
+            <option data-name='New York Yankees' value='Yankees'>New York Yankees</option>
+            <option data-name='Toronto Blue Jays' value='Blue Jays'>Toronto Blue Jays</option>
+            <option data-name='Tampa Bay Rays' value='Rays'>Tampa Bay Rays</option>
+            <option data-name='Baltimore Orioles' value='Orioles'>Baltimore Orioles</option>
+          </select>
+        </form>
+        <div><p class='textfield'></p></div>
       </section>
     </main>
     <footer>
@@ -56,6 +82,7 @@
         <li><a href='#top'>Back to Top</a></li>
       </ul>
     </footer>
+    <script src='jquery/jquery-1.11.2.js'></script>
     <script src='js/mlb.js'></script>
   </body>
 </html?
