@@ -1,3 +1,6 @@
+!This site is not responsive, built and meant to be viewed on a 13inch monitor!
+
+
 This file is the beginning of a class assignment to demonstate objects and their contruction. With pitchers and catchers reporting in a little over a week, I'm trying to create a simple baseball almanac.
 
 As of, 2/10/15, I've covered the AL West: Mariners, Athletics, Rangers, Astros, and Angels.
@@ -17,3 +20,13 @@ searchLeague() alerts what teams are in what division
 Questions:
 How do I access an array objects set as a property of another object?
 mlb.americanLeague[0][0].teamName -> Uncaught TypeError: Cannot read property '0' of undefined
+
+Update 2/13/15:
+HTML/CCC styling applied, however the page is not responsive.Still a lot of work needed their.
+
+Jquery function triggerd by dropdown that accesses teamPool and calls the briefhistory method
+
+The most important insight I gained from this assignment is
+responsive design, and how complex it is. Not thinking, I found myself too deep into the project and too intimidated to go back and try and adapt the page.
+
+For the most part this was all accomplished by myself. Galen Broderick did help me out, big time, with binding the jquery function to the event.
