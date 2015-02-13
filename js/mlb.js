@@ -9,7 +9,7 @@ var MlbTeam = function(league, division, teamName, shortName, teamCity, firstYea
   this.pennantsWon = pennantsWon;
   this.worldSeriesWon = worldSeriesWon;
   this.briefHistory = function() {
-    return "<h3>Since " + this.firstYear + ", the " + this.teamName + " have won the:</h3><br />" +
+    return "<h4>Since " + this.firstYear + ", the " + this.teamName + " have won the:</h4><br />" +
           this.league + " " + this.division +  ": " + this.divisionsWon + " time(s)<br />" +
           this.league + " Pennant: " + this.pennantsWon + " time(s)<br />" +
           "The World Series: " + this.worldSeriesWon + " time(s)";
@@ -49,35 +49,19 @@ var washingtonNationals = new MlbTeam("National League", "East", "Washington Nat
 
 var teamPool = [seattleMariners,oaklandAthletics, laAngels, texasRangers, houstonAstros, detroitTigers, kansasCityRoyals, chicagoWhiteSoxs, clevelandIndians, minnesotaTwins,bostonRedSoxs, newYorkYankees, torontoBlueJays, tampaBayRays, baltimoreOrioles, losAngelesDodgers, sanFranciscoGiants,sanDiegoPadres, arizonaDaimondbacks, coloradoRockies, stLouisCardinals, milwaukeeBrewers, cincinnatiReds, chicagoCubs, pittsburghPirates, washingtonNationals, atlantaBraves, newYorkMets, miamiMarlins, philadelphiaPhillies];
 
-function leagueSearch(x,y) {
-  var msg = "";
-  if(x && y){
-    msg+= "The " + x + " " + y + ":\n\n";
-  }else if(x && y == undefined){
-    msg+= "The " + x + ":\n\n";
-  }
-  for(var i = 0; i < teamPool.length; i++) {
-    if(teamPool[i].league == x && teamPool[i].division == y){
-      msg += teamPool[i].teamName + "\n";
-    }else if(teamPool[i].league == x && y == undefined) {
-      msg += teamPool[i].teamName + "\n";
-    }
-  }
-  alert(msg);
-}
 var id = "";
 $(document).ready(function() {
   $('#american').change(function() {
     id = $("#american option:selected").attr('data-name');
     var history = searchArray();
-    $('.textfield').html(history);
-    //alert(searchArray());
+    $('p.before').addClass('after');
+    $('.after').html(history);
   });
   $('#national').change(function() {
     id = $("#national option:selected").attr('data-name');
     var history = searchArray();
-    $('.textfield').html(history);
-    //alert(searchArray());
+    $('p.before').addClass('after');
+    $('.after').html(history);
   });
 });
 function searchArray() {

@@ -79,12 +79,19 @@ img.align-left {
   float: right;
   /*margin: 10em 10em 10em 10em;*/
 }
-.textfield {
+.before {
+  height: 25em;
+  width: 30em;
+  padding-top: 7.5em;
+  padding-left: 7.5em;
+  font-size: 1.25em;
+}
+.after {
   color: white;
   height: 25em;
   width: 30em;
-  padding-top: 5em;
-  padding-left: 5em;
+  padding-top: 3em;
+  padding-left: 1em;
 }
 
 /* Footer */
