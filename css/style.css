@@ -19,12 +19,21 @@ header {
   /*text-align: center;*/
   padding: .5em 0 0.5em 1.5em;
   font-size: .8em;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
 }
 header h1 {
   padding-left: 1em;
 }
 span {
   color: #a7a8aa;
+}
+
+/* Main */
+
+main {
+  margin-top: 12em;
 }
 
 /* Division, Pennant and Series Sections */
@@ -101,7 +110,7 @@ footer {
   color: #a7a8aa;
   width: 100%;
   padding: .75em 0 1em 0;
-  margin-top: 4em;
+  margin-top: 0em;
   font-size: .8em;
 }
 footer span {
@@ -121,11 +130,11 @@ footer li {
   position: relative;
   bottom: 2.5em;
 }
-footer a {
+a {
   text-decoration: none;
   color: #a7a8aa;
 }
-footer a:hover {
+a:hover {
   color: black;
 }
 
