@@ -16,7 +16,7 @@ header {
   background-color: white;
   color: black;
   width: 100%;
-  opacity: .85;
+  opacity: .89;
   padding: .5em 0 0.5em 1.5em;
   font-size: .8em;
   position: fixed;
@@ -93,7 +93,7 @@ main {
 
 blockquote {
   text-align: center;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
   position: relative;
   left: -2.5em;
 }
@@ -174,16 +174,21 @@ form {
 .before {
   height: 35em;
   width: 38em;
+  margin-top: 3em;
+  margin-bottom: -4em;
   /*padding-top: 0em;
   padding-left: 0em;*/
-  margin-top: 5em;
+
 
 }
 .after {
   color: white;
   height: 35em;
   width: 38em;
-  margin-top: 5em;
+  padding-top: .5em;
+  margin-top: 3em;
+  margin-bottom: -4em;
+
  /*padding-top: 0em;
   padding-left: 0em;*/
 }
