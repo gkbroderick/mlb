@@ -16,11 +16,12 @@ header {
   background-color: white;
   color: black;
   width: 100%;
-  /*text-align: center;*/
+  opacity: .85;
   padding: .5em 0 0.5em 1.5em;
   font-size: .8em;
   position: fixed;
-  top: 0px;
+  top: -.5em;
+  /*top: 0px;*/
   z-index: 99;
 }
 header h1 {
@@ -28,12 +29,15 @@ header h1 {
 }
 span {
   color: #a7a8aa;
+  text-shadow: none;
 }
 
 /* Banner */
 .banner {
   position: relative;
   overflow: auto;
+  top: -1em;
+  right: 10em;
 }
 .banner li {
   list-style: none;
@@ -41,11 +45,57 @@ span {
 .banner ul li {
   float: left;
 }
+.banner img {
+  width: 90em;
+  height: 35em;
+  position: relative;
+
+}
+.banner h2 {
+  position: absolute
+  color: white;
+  z-index: 99;
+
+}
+.dots {
+  position: absolute;
+  left: 2.75em;
+  right: 0;
+  bottom: 20px;
+  text-align: center;
+}
+
+.dots li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  text-indent: -999em;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: .4;
+  -webkit-transition: background .5s, opacity .5s;
+  -moz-transition: background .5s, opacity .5s;
+  transition: background .5s, opacity .5s;
+}
+
+.dots li.active {
+  background: #fff;
+  opacity: 1;
+}
 
 /* Main */
 
 main {
-  margin-top: 12em;
+  margin-top: 5em;
+}
+
+blockquote {
+  text-align: center;
+  margin-bottom: 10em;
+  position: relative;
+  left: -2.5em;
 }
 
 /* Division, Pennant and Series Sections */
@@ -54,7 +104,7 @@ main {
 #pennant,
 #series {
   width: 90%;
-  margin: 3em 3em 0 3em;
+  margin: 0em 3em 0 3em;
   clear: both;
   line-height: 1.5em;
 }
@@ -70,14 +120,14 @@ main {
   width: 45%;
 }
 img.align-right {
-  height: 25em;
+  height: 30em;
   width: 30em;
   border-radius: 1%;
   float: right;
-  padding-bottom: 2em;
+  margin-bottom: 2em;
   margin-right: 2.5em;
   position: relative;
-  top: 4.5em;
+  top: 1em;
 }
 img.align-left {
   height: 30em;
@@ -86,40 +136,67 @@ img.align-left {
   float: left;
   position: relative;
   top: 2em;
+  clear: right;
 }
 
 /* Champions Section */
 
 #champions {
   width: 90%;
-  padding: 3em 3em 0 3em;
+  padding: 3em 3em 0 0em;
+  background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/75/7598/PV7F300Z/posters/baseball-joe-dimaggio-quote.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 5%;
+  left: 5em;
+  bottom: 3em;
 }
+#champions p {
+  text-align: left;
+  text-shadow: 0px 3px 2px rgba(154, 147, 163, 1);
+  position: relative;
+  left: 2em;
+  top: 15.5em;
+
+}
+
 #nl,
 #al {
-  width: 20%;
-  padding-top: 10em;
+  display: inline;
+  width: 25%;
+  padding-top: 15em;
   float: right;
 }
+form {
+  text-align: center;
+}
 .before {
-  height: 25em;
-  width: 30em;
-  padding-top: 7.5em;
-  padding-left: 7.5em;
-  font-size: 1.25em;
+  height: 35em;
+  width: 38em;
+  /*padding-top: 0em;
+  padding-left: 0em;*/
+  margin-top: 5em;
+
 }
 .after {
   color: white;
-  height: 25em;
-  width: 30em;
-  padding-top: 3em;
-  padding-left: 1em;
+  height: 35em;
+  width: 38em;
+  margin-top: 5em;
+ /*padding-top: 0em;
+  padding-left: 0em;*/
 }
+
+
+
 
 /* Footer */
 
 footer {
   background-color: white;
   color: #a7a8aa;
+  opacity: .95;
   width: 100%;
   padding: .75em 0 1em 0;
   margin-top: 0em;

@@ -9,10 +9,10 @@ var MlbTeam = function(league, division, teamName, shortName, teamCity, firstYea
   this.pennantsWon = pennantsWon;
   this.worldSeriesWon = worldSeriesWon;
   this.briefHistory = function() {
-    return "<h4>Since " + this.firstYear + ", the " + this.teamName + " have won the:</h4><br />" +
+    return "<p>Since " + this.firstYear + ", the " + this.teamName + " have won the:<br /><br />" +
           this.league + " " + this.division +  ": " + this.divisionsWon + " time(s)<br />" +
           this.league + " Pennant: " + this.pennantsWon + " time(s)<br />" +
-          "The World Series: " + this.worldSeriesWon + " time(s)";
+          "The World Series: " + this.worldSeriesWon + " time(s)</p>";
     };
   };
 
@@ -51,7 +51,6 @@ var teamPool = [seattleMariners,oaklandAthletics, laAngels, texasRangers, housto
 
 var id = "";
 $(document).ready(function() {
-  //$('.banner').unslider();
   $('.banner').unslider({
     speed: 500,               //  The speed to animate each slide (in milliseconds)
     delay: 3000,              //  The delay between slide animations (in milliseconds)
@@ -60,16 +59,22 @@ $(document).ready(function() {
     dots: true,               //  Display dot navigation
     fluid: false              //  Support responsive design. May break non-responsive designs
   });
+  $(window).on('scrollstart', function() {
+    $('header').slideUp(500);
+  });
+  $(window).on('scrollstop', function() {
+    $('header').slideDown(1000);
+  });
   $('#american').change(function() {
     id = $("#american option:selected").attr('data-name');
     var history = searchArray();
-    $('p.before').addClass('after');
+    $('.before').addClass('after');
     $('.after').html(history);
   });
   $('#national').change(function() {
     id = $("#national option:selected").attr('data-name');
     var history = searchArray();
-    $('p.before').addClass('after');
+    $('.before').addClass('after');
     $('.after').html(history);
   });
 });
