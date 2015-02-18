@@ -30,6 +30,18 @@ span {
   color: #a7a8aa;
 }
 
+/* Banner */
+.banner {
+  position: relative;
+  overflow: auto;
+}
+.banner li {
+  list-style: none;
+}
+.banner ul li {
+  float: left;
+}
+
 /* Main */
 
 main {
