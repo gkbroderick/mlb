@@ -23,6 +23,7 @@ header {
   top: -.5em;
   /*top: 0px;*/
   z-index: 99;
+
 }
 header h1 {
   padding-left: 1em;
@@ -30,6 +31,34 @@ header h1 {
 span {
   color: #a7a8aa;
   text-shadow: none;
+}
+#menu img {
+  color: #a7a8aa;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 2.5em;
+  right: 3em;
+}
+#dropdown {
+  background: white;
+  opacity: 1;
+  width: 8%;
+  border-radius: 0 0 0 5%;
+  position: absolute;
+  top: 3.5em;
+  right: 0em;
+
+}
+#dropdown img {
+  width: 2em;
+  height: 2em;
+
+}
+#dropdown li {
+  list-style: none;
+  padding-right: 2em;
+  margin: 1em 0 1em 0;
 }
 
 /* Banner */

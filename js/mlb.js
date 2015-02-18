@@ -47,9 +47,17 @@ var washingtonNationals = new MlbTeam("National League", "East", "Washington Nat
     newYorkMets = new MlbTeam("National League", "East", "New York Mets", "Mets", "New York", 1962, 5, 4, 2),
     philadelphiaPhillies = new MlbTeam("National League", "East", "Philadelphia Phillies", "Phillies", "Philadelphia", 1883, 11, 7, 2);
 
-var teamPool = [seattleMariners,oaklandAthletics, laAngels, texasRangers, houstonAstros, detroitTigers, kansasCityRoyals, chicagoWhiteSoxs, clevelandIndians, minnesotaTwins,bostonRedSoxs, newYorkYankees, torontoBlueJays, tampaBayRays, baltimoreOrioles, losAngelesDodgers, sanFranciscoGiants,sanDiegoPadres, arizonaDaimondbacks, coloradoRockies, stLouisCardinals, milwaukeeBrewers, cincinnatiReds, chicagoCubs, pittsburghPirates, washingtonNationals, atlantaBraves, newYorkMets, miamiMarlins, philadelphiaPhillies];
+var teamPool = [seattleMariners,oaklandAthletics, laAngels, texasRangers, houstonAstros, detroitTigers, kansasCityRoyals, chicagoWhiteSoxs, clevelandIndians, minnesotaTwins,bostonRedSoxs, newYorkYankees, torontoBlueJays, tampaBayRays, baltimoreOrioles, losAngelesDodgers, sanFranciscoGiants,sanDiegoPadres, arizonaDaimondbacks, coloradoRockies, stLouisCardinals, milwaukeeBrewers, cincinnatiReds, chicagoCubs, pittsburghPirates, washingtonNationals, atlantaBraves, newYorkMets, miamiMarlins, philadelphiaPhillies],
+    id = "";
+function searchArray() {
+  for(var i = 0; i < teamPool.length; i++) {
+    if(teamPool[i].teamName === id) {
+      return teamPool[i].briefHistory();
+    }
+  }
+}
 
-var id = "";
+var $dropDown = $('#dropdown');
 $(document).ready(function() {
   $('.banner').unslider({
     speed: 500,               //  The speed to animate each slide (in milliseconds)
@@ -65,6 +73,10 @@ $(document).ready(function() {
   $(window).on('scrollstop', function() {
     $('header').slideDown(1000);
   });
+  $dropDown.hide();
+  $('#menu').click(function() {
+    $dropDown.slideToggle('slow');
+  });
   $('#american').change(function() {
     id = $("#american option:selected").attr('data-name');
     var history = searchArray();
@@ -78,12 +90,6 @@ $(document).ready(function() {
     $('.after').html(history);
   });
 });
-function searchArray() {
-  for(var i = 0; i < teamPool.length; i++) {
-    if(teamPool[i].teamName === id) {
-      return teamPool[i].briefHistory();
-    }
-  }
-}
+
 
 
