@@ -74,7 +74,7 @@ $(document).ready(function() {
     $('header').slideDown(1000);
   });
   $dropDown.hide();
-  $('#menu').click(function() {
+  $('nav').click(function() {
     $dropDown.slideToggle('slow');
   });
   $('#american').change(function() {
