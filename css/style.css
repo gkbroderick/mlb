@@ -3,9 +3,9 @@
 }
 
 body {
-  background-color: black;
+  background-color: #111;
   font-family: 'Playfair Display', serif;
-  color: white;
+  color: #f2f2f2;
   letter-spacing: .05em;
 }
 
@@ -13,8 +13,8 @@ body {
 
 header {
 
-  background-color: white;
-  color: black;
+  background-color: #f2f2f2;
+  color: #3f403b;
   width: 100%;
   opacity: .89;
   padding: .5em 0 0.5em 1.5em;
@@ -41,7 +41,7 @@ nav img {
   right: 3em;
 }
 #dropdown {
-  background: white;
+  background: #f2f2f2;
   opacity: 1;
   width: 8%;
   border-radius: 0 0 0 5%;
@@ -143,11 +143,13 @@ blockquote {
 #series h2,
 #series p {
   width: 45%;
+  text-align: justify;
 }
 #pennant h2,
 #pennant p {
   float: right;
   width: 45%;
+  text-align: justify;
 }
 img.align-right {
   height: 30em;
@@ -229,7 +231,7 @@ form {
 /* Footer */
 
 footer {
-  background-color: white;
+  background-color: #f2f2f2;
   color: #a7a8aa;
   opacity: .95;
   width: 100%;
