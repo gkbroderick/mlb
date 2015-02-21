@@ -36,6 +36,9 @@ nav img {
   color: #a7a8aa;
   width: 2em;
   height: 2em;
+  border: 1px solid;
+  border-radius: 15%;
+  box-shadow: 3px 3px 3px gray;
   position: absolute;
   top: 2.5em;
   right: 3em;
@@ -46,7 +49,7 @@ nav img {
   width: 8%;
   border-radius: 0 0 0 5%;
   position: absolute;
-  top: 3.5em;
+  top: 5.3em;
   right: 0em;
 
 }
@@ -200,6 +203,9 @@ img.align-left {
   padding-top: 15em;
   float: right;
 }
+fieldset {
+  border: none;
+}
 form {
   text-align: center;
 }
@@ -235,33 +241,37 @@ footer {
   color: #a7a8aa;
   opacity: .95;
   width: 100%;
-  padding: .75em 0 1em 0;
+  padding: 1em 0 1em 0;
   margin-top: 0em;
-  font-size: .8em;
+  font-size: 1em;
 }
 footer span {
   color: black;
 }
 footer h4 {
-  width: 50%;
+  width: 75%;
   margin-left: 2em;
   clear: both;
 
 }
-footer li {
-  display: inline;
-  list-style: none;
-  margin-right: 2em;
+#arrowup {
   float: right;
   position: relative;
-  bottom: 2.5em;
+  bottom: 5.5em;
+  left: 0.5em;
+}
+#arrowup img {
+  color: #a7a8aa;
+  border: 1px solid;
+  border-radius: 15%;
+  box-shadow: 3px 3px 3px gray;
+  width: 2em;
+  height: 2em;
 }
 a {
   text-decoration: none;
   color: #a7a8aa;
 }
-a:hover {
-  color: black;
-}
+
 
 
