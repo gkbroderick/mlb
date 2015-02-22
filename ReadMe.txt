@@ -1,5 +1,7 @@
 Final Update for InroCS project.
 
+http://mcgough.github.io/mlb/ (gh-pages)
+
 I've spent a good amount of time on this page. More than, I'd like to admit actually. A decision to center the entire layout near the deadline, tacked on what seemed like an entire day's work. After dealing with that mistake and cleaning up the code, I've spent nearly 25 hours on this page.
 
 I felt like the project went really well. The entire process was a learning experience. From building the object constructor, to putting the layout together by design, and ending with the effects using jQuery.
