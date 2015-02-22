@@ -74,7 +74,6 @@ $(function() {
   $(window).on('scrollstop', function() {
     $header.slideDown(1000);
   });
-
   $('nav img').mousedown(function(){
     $(this).css('border', '3px solid #a7a8aa')
     .css('box-shadow', '0 0 0 0');
