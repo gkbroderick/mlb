@@ -26,18 +26,20 @@ header {
 header h1 {
   padding-left: 1em;
 }
+nav img,
 span {
   color: #a7a8aa;
-  text-shadow: none;
 }
-nav img {
-  color: #a7a8aa;
-  width: 2em;
-  height: 2em;
-  border: 1px solid;
-  border-radius: 15%;
-  box-shadow: 3px 3px 3px gray;
+nav img,
+#dropdown {
   position: absolute;
+}
+ nav img {
+  width: 2.5em;
+  height: 2.5em;
+  border: 1px solid;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px gray;
   top: 2.2em;
   right: 3em;
 }
@@ -46,7 +48,6 @@ nav img {
   background: #f2f2f2;
   border-radius: 0 0 0 5%;
   float: right;
-  position: absolute;
   left: 92em;
 }
 #dropdown img {
@@ -137,23 +138,16 @@ img {
   width: 27em;
   height: 27em;
 }
-.text {
+.text,
+.text-1,
+.text-2 {
   width: 45%;
   text-align: justify;
   line-height: 2em;
   float: left;
 }
 .text-1 {
-  width: 45%;
   float: right;
-  line-height: 2em;
-  text-align: justify;
-}
-.text-2 {
-  width: 45%;
-  text-align: justify;
-  line-height: 2em;
-  float: left;
 }
 .image,
 .image-2 {
@@ -165,12 +159,6 @@ img {
 
 /* Champions Aside*/
 
-hr {
-  width: 40%;
-  clear: both;
-  position: relative;
-  top: 3em;
-}
 #champions {
   margin: auto;
   margin-bottom: 4.5em;
@@ -182,10 +170,7 @@ form {
   top: 17em;
   left: 5em;
 }
-#nl {
-  text-align: center;
-  float: right;
-}
+#nl,
 #al {
   text-align: center;
   float: right;
@@ -247,10 +232,10 @@ footer h4 {
 #arrowup img {
   color: #a7a8aa;
   border: 1px solid;
-  border-radius: 15%;
+  border-radius: 50%;
   box-shadow: 3px 3px 3px gray;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
 }
 a {
   text-decoration: none;

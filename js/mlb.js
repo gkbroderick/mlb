@@ -22,12 +22,12 @@ $(function() {
       texasRangers = new MlbTeam("American League", "West", "Texas Rangers", "Rangers", "Arlington", 1972, 5, 2, 0),
       houstonAstros = new MlbTeam("American League", "West", "Houston Astros", "Astros", "Houston", 1965, 7, 1, 0),
       laAngels = new MlbTeam("American League", "West", "Los Angeles Angels", "Halos", "Anaheim", 1961, 9, 1, 1);
-  var detroitTigers = new MlbTeam("American League", "Central", "Detroit Tigers", "Tigers", "Detroit", 1901, 7, 11, 4),
+      detroitTigers = new MlbTeam("American League", "Central", "Detroit Tigers", "Tigers", "Detroit", 1901, 7, 11, 4),
       kansasCityRoyals = new MlbTeam("American League", "Central", "Kansas City Royals", "Royals", "Kansas City", 1969, 6, 3, 1),
       minnesotaTwins = new MlbTeam("American League", "Central", "Minnesota Twins", "Twins", "Minneapolis", 1961, 10, 6, 3),
       chicagoWhiteSoxs = new MlbTeam("American League", "Central", "Chicago White Sox", "White Soxs", "Chicago", 1901, 5, 6, 3),
       clevelandIndians = new MlbTeam("American League", "Central", "Cleveland Indians", "Tribe", "Cleveland", 1915, 7, 5, 2);
-  var newYorkYankees = new MlbTeam("American League", "East", "New York Yankees", "Yankees", "New York", 1913, 18, 40, 27),
+      newYorkYankees = new MlbTeam("American League", "East", "New York Yankees", "Yankees", "New York", 1913, 18, 40, 27),
       torontoBlueJays = new MlbTeam("American League", "East", "Toronto Blue Jays", "Blue Jays", "Toronto", 1977, 5, 2, 2),
       baltimoreOrioles = new MlbTeam("American League", "East", "Baltimore Orioles", "Orioles", "Baltimore", 1954, 9, 7, 3),
       bostonRedSoxs = new MlbTeam("American League", "East", "Boston Red Sox", "Red Sox", "Boston", 1901, 7, 13, 8),
@@ -37,12 +37,12 @@ $(function() {
       sanDiegoPadres = new MlbTeam("National League", "West", "San Diego Padres", "Friars", "San Diego", 1969, 5, 2, 0),
       arizonaDaimondbacks = new MlbTeam("National League", "West", "Arizona Diamondbacks", "Diamondbacks", "Phoenix", 1998, 5, 1, 1),
       coloradoRockies = new MlbTeam("National League", "West", "Colorado Rockies", "Rockies", "Denver", 1993, 0, 1, 0);
-  var stLouisCardinals = new MlbTeam("National League", "Central", "St Louis Cardinals", "Cardinals", "St. Louis", 1882, 12, 19, 11),
+      stLouisCardinals = new MlbTeam("National League", "Central", "St Louis Cardinals", "Cardinals", "St. Louis", 1882, 12, 19, 11),
       pittsburghPirates = new MlbTeam("National League", "Central", "Pittsburgh Pirates", "Bucs", "Pittsburgh", 1912, 9, 9, 5),
       milwaukeeBrewers = new MlbTeam("National League", "Central", "Milwaukee Brewers", "Brew Crew", "Milwaukee", 1969, 3, 1, 0),
       cincinnatiReds = new MlbTeam("National League", "Central", "Cincinnati Reds", "Reds", "Cincinnati", 1881, 10, 9, 5),
       chicagoCubs = new MlbTeam("National League", "Central", "Chicago Cubs", "Cubbies", "Chicago", 1870, 5, 16, 2);
-  var washingtonNationals = new MlbTeam("National League", "East", "Washington Nationals", "Nats", "Washington D.C.", 2005, 2, 0, 0),
+      washingtonNationals = new MlbTeam("National League", "East", "Washington Nationals", "Nats", "Washington D.C.", 2005, 2, 0, 0),
       atlantaBraves = new MlbTeam("National League", "East", "Atlanta Braves", "Braves", "Atlanta", 1966, 17, 5, 1),
       miamiMarlins = new MlbTeam("National League", "East", "Miami Marlins", "Marlins", "Miami", 1993, 0, 2, 2),
       newYorkMets = new MlbTeam("National League", "East", "New York Mets", "Mets", "New York", 1962, 5, 4, 2),
@@ -76,7 +76,6 @@ $(function() {
           .css('box-shadow', '0 0 0 0');
           $(this).mouseup(function() {
             $(this).css('border', '1px solid')
-            .css('border-radius', '15%')
             .css('box-shadow', '3px 3px 3px gray');
           });
         });
