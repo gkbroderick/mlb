@@ -41,7 +41,7 @@ nav img,
   border-radius: 50%;
   box-shadow: 3px 3px 3px gray;
   top: 2.2em;
-  right: 3em;
+  right: 2.8em;
 }
 #dropdown {
   width: 8%;
@@ -56,7 +56,6 @@ nav img,
 }
 #dropdown li {
   list-style: none;
-  padding-right: 2em;
   margin: .5em 0 1em 0;
 }
 

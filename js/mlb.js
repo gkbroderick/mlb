@@ -106,8 +106,8 @@ $(function() {
   });
   //...
 
-  pressDown('nav img');
   $dropDown.hide();
+  pressDown('nav img');
   $('.menu-icon').click(function() {
     $dropDown.slideToggle(350);
   });
