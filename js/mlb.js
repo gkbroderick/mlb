@@ -69,7 +69,7 @@ $(function() {
     fluid: false              //  Support responsive design. May break non-responsive designs
   });
   $(window).on('scrollstart', function() {
-    $header.slideUp(500);
+    $header.slideUp(250);
   });
   $(window).on('scrollstop', function() {
     $header.slideDown(1000);
@@ -95,7 +95,7 @@ $(function() {
   });
   $dropDown.hide();
   $('.menu-icon').click(function() {
-    $dropDown.slideToggle('slow');
+    $dropDown.slideToggle(350);
   });
   $('#american').change(function() {
     id = $("#american option:selected").attr('data-name');
