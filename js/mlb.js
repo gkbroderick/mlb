@@ -89,7 +89,7 @@ $(function() {
         });
       };
 
-  //Plug-Ins...
+  //Plug-Ins...(UnSlider and http://ssorallen/jquery-scrollstop)
   $('.banner').unslider({
     speed: 500,               //  The speed to animate each slide (in milliseconds)
     delay: 2500,              //  The delay between slide animations (in milliseconds)
