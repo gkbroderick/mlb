@@ -77,21 +77,21 @@ $(function() {
   $('nav img').mousedown(function(){
     $(this).css('border', '3px solid #a7a8aa')
     .css('box-shadow', '0 0 0 0');
-  });
-  $('nav img').mouseup(function(){
-    $(this).css('border', '1px solid')
-    .css('border-radius', '15%')
-    .css('box-shadow', '3px 3px 3px gray');
+    $(this).mouseup(function(){
+      $(this).css('border', '1px solid')
+      .css('border-radius', '15%')
+      .css('box-shadow', '3px 3px 3px gray');
+    });
   });
   $('#arrowup').mousedown(function() {
     $(this).css('border', '1px solid')
     .css('border-radius', '15%')
     .css('box-shadow', '3px 3px 3px gray');
-  });
-  $('#arrowup img').mouseup(function(){
-    $(this).css('border', '1px solid')
-    .css('border-radius', '15%')
-    .css('box-shadow', '3px 3px 3px gray');
+    $(this).mouseup(function(){
+      $(this).css('border', '1px solid')
+      .css('border-radius', '15%')
+      .css('box-shadow', '3px 3px 3px gray');
+    });
   });
   $dropDown.hide();
   $('.menu-icon').click(function() {

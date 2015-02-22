@@ -19,10 +19,9 @@ header {
   padding: 0.5em 0 1em 1.5em;
   font-size:.8em;
   position: fixed;
-  margin-top: 0em;
-  margin-bottom: 2em;
+  top: -.5em;
   font-size: .8em;
-  z-index: 999;
+  z-index: 99;
 }
 header h1 {
   padding-left: 1em;
@@ -43,11 +42,12 @@ nav img {
   right: 3em;
 }
 #dropdown {
-  border: 1px solid black;
+  width: 8%;
   background: #f2f2f2;
   border-radius: 0 0 0 5%;
   float: right;
-
+  position: absolute;
+  left: 92em;
 }
 #dropdown img {
   width: 2em;
@@ -114,18 +114,22 @@ nav img {
 main {
   width: 75%;
   margin: auto;
-  margin-top: 5em;
+  margin-top: 3em;
 }
 blockquote {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 3.5em;
+}
+.line-1 {
+  margin-bottom: 5em;
+  position: relative;
+  bottom: 5em;
 }
 
 /* Division, Pennant and Series Sections */
 
 #division {
   padding-top: 1em;
-  border-top: 1px solid white;
   margin-bottom: 5em;
 }
 img {
@@ -160,16 +164,20 @@ img {
 
 /* Champions Aside*/
 
+hr {
+  clear: both;
+  position: relative;
+  top: 3em;
+}
 #champions {
   margin: auto;
 }
-
 form {
-  width: 45%;
+  width: 60%;
   float: right;
   position: relative;
   top: 17em;
-
+  left: 5em;
 }
 #nl {
   text-align: center;
@@ -185,7 +193,8 @@ fieldset {
 .before {
   width: 50%;
   height: 25em;
-  margin-top: 5em;
+  margin-top: 4em;
+  margin-bottom; 2em;
   background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/75/7598/PV7F300Z/posters/baseball-joe-dimaggio-quote.jpg');
   background-repeat: no-repeat;
   float: left;
@@ -203,7 +212,7 @@ fieldset {
 .after p {
   text-shadow: 0px 3px 2px rgba(154, 147, 163, 1);
   position: relative;
-  top: 12em;
+  top: 11.5em;
   left: 2em;
 }
 
@@ -214,7 +223,7 @@ footer {
   color: #a7a8aa;
   opacity: .95;
   width: 100%;
-  padding: 1em 0 1em 0;
+  padding: .5em 0 .5em 0;
   font-size: 1em;
   clear: both;
 }
