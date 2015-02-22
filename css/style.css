@@ -162,6 +162,12 @@ img {
   margin: auto;
   margin-bottom: 4.5em;
 }
+aside h2 {
+  clear: both;
+  position: relative;
+  top: 6em;
+  left: 4em;
+}
 form {
   width: 60%;
   float: right;
