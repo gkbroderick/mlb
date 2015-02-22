@@ -136,6 +136,7 @@ blockquote {
 img {
   width: 27em;
   height: 27em;
+  border-radius: 2%;
 }
 .text,
 .text-1,
@@ -166,7 +167,7 @@ aside h2 {
   clear: both;
   position: relative;
   top: 6em;
-  left: 4em;
+  left: 3.5em;
 }
 form {
   width: 60%;
@@ -190,6 +191,7 @@ fieldset {
   margin-bottom: 3em;
   background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/75/7598/PV7F300Z/posters/baseball-joe-dimaggio-quote.jpg');
   background-repeat: no-repeat;
+  border-radius: 2%;
   float: left;
   position: relative;
   right: 1em;
