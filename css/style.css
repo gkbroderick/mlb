@@ -12,7 +12,6 @@ body {
 /* Header */
 
 header {
-
   background-color: #f2f2f2;
   color: #3f403b;
   width: 100%;
@@ -21,9 +20,7 @@ header {
   font-size: .8em;
   position: fixed;
   top: -.5em;
-  /*top: 0px;*/
   z-index: 99;
-
 }
 header h1 {
   padding-left: 1em;
@@ -40,7 +37,7 @@ nav img {
   border-radius: 15%;
   box-shadow: 3px 3px 3px gray;
   position: absolute;
-  top: 2.5em;
+  top: 2.2em;
   right: 3em;
 }
 #dropdown {
@@ -51,12 +48,10 @@ nav img {
   position: absolute;
   top: 5.3em;
   right: 0em;
-
 }
 #dropdown img {
   width: 2em;
   height: 2em;
-
 }
 #dropdown li {
   list-style: none;
@@ -82,13 +77,11 @@ nav img {
   width: 90em;
   height: 35em;
   position: relative;
-
 }
 .banner h2 {
   position: absolute
   color: white;
   z-index: 99;
-
 }
 .dots {
   position: absolute;
@@ -97,7 +90,6 @@ nav img {
   bottom: 20px;
   text-align: center;
 }
-
 .dots li {
   display: inline-block;
   width: 10px;
@@ -112,7 +104,6 @@ nav img {
   -moz-transition: background .5s, opacity .5s;
   transition: background .5s, opacity .5s;
 }
-
 .dots li.active {
   background: #fff;
   opacity: 1;
@@ -121,57 +112,46 @@ nav img {
 /* Main */
 
 main {
+  width: 75%;
+  margin: auto;
   margin-top: 5em;
 }
-
 blockquote {
   text-align: center;
   margin-bottom: 5em;
-  position: relative;
-  left: -2.5em;
 }
 
 /* Division, Pennant and Series Sections */
-
-#division,
-#pennant,
-#series {
-  width: 90%;
-  margin: 0em 3em 0 3em;
-  clear: both;
-  line-height: 1.5em;
+#division {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-bottom: 5em;
 }
-#division h2,
-#division p,
-#series h2,
-#series p {
+img {
+  width: 27em;
+  height: 27em;
+}
+.text {
   width: 45%;
   text-align: justify;
-}
-#pennant h2,
-#pennant p {
-  float: right;
-  width: 45%;
-  text-align: justify;
-}
-img.align-right {
-  height: 30em;
-  width: 30em;
-  border-radius: 1%;
-  float: right;
-  margin-bottom: 2em;
-  margin-right: 2.5em;
-  position: relative;
-  top: 1em;
-}
-img.align-left {
-  height: 30em;
-  width: 30em;
-  border-radius: 1%;
+  line-height: 2em;
   float: left;
-  position: relative;
-  top: 2em;
-  clear: right;
+}
+.text-1 {
+  width: 45%;
+  float: right;
+  line-height: 2em;
+  text-align: justify;
+}
+.text-2 {
+  width: 45%;
+  text-align: justify;
+  line-height: 2em;
+  float: left;
+}
+.image,
+.image-2 {
+  float: right;
 }
 
 /* Champions Section */
@@ -193,9 +173,7 @@ img.align-left {
   position: relative;
   left: 2em;
   top: 15.5em;
-
 }
-
 #nl,
 #al {
   display: inline;
@@ -214,10 +192,6 @@ form {
   width: 38em;
   margin-top: 3em;
   margin-bottom: -4em;
-  /*padding-top: 0em;
-  padding-left: 0em;*/
-
-
 }
 .after {
   color: white;
@@ -226,13 +200,7 @@ form {
   padding-top: .5em;
   margin-top: 3em;
   margin-bottom: -4em;
-
- /*padding-top: 0em;
-  padding-left: 0em;*/
 }
-
-
-
 
 /* Footer */
 
@@ -252,12 +220,11 @@ footer h4 {
   width: 75%;
   margin-left: 2em;
   clear: both;
-
 }
 #arrowup {
   float: right;
   position: relative;
-  bottom: 5.5em;
+  bottom: 5em;
   left: 0.5em;
 }
 #arrowup img {
@@ -265,8 +232,8 @@ footer h4 {
   border: 1px solid;
   border-radius: 15%;
   box-shadow: 3px 3px 3px gray;
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
 }
 a {
   text-decoration: none;
