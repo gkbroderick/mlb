@@ -59,7 +59,38 @@ $(function() {
   }
 
   var $dropDown = $('#dropdown'),
-      $header = $('header');
+      $header = $('header'),
+      hoverOver = function(element,hovered,notHovered) {
+          $(element).on({
+          "mouseover" : function() {
+          this.src = hovered;
+          },
+          "mouseout" : function() {
+          this.src= notHovered;
+          }
+        });
+      };
+      pressDown = function(element) {
+          $(element).mousedown(function(){
+          $(this).css('border', '3px solid #a7a8aa')
+          .css('box-shadow', '0 0 0 0');
+          $(this).mouseup(function() {
+            $(this).css('border', '1px solid')
+            .css('border-radius', '15%')
+            .css('box-shadow', '3px 3px 3px gray');
+          });
+        });
+      };
+      teamSelection = function(league) {
+        $(league).change(function() {
+          id = $(league + ' option:selected').attr('data-name');
+          var history = searchArray();
+          $('.before').addClass('after');
+          $('.after').html(history);
+        });
+      };
+
+  //Plug-Ins...
   $('.banner').unslider({
     speed: 500,               //  The speed to animate each slide (in milliseconds)
     delay: 2500,              //  The delay between slide animations (in milliseconds)
@@ -69,46 +100,27 @@ $(function() {
     fluid: false              //  Support responsive design. May break non-responsive designs
   });
   $(window).on('scrollstart', function() {
-    $header.slideUp(250);
+    $header.slideUp(200);
   });
   $(window).on('scrollstop', function() {
     $header.slideDown(1000);
   });
-  $('nav img').mousedown(function(){
-    $(this).css('border', '3px solid #a7a8aa')
-    .css('box-shadow', '0 0 0 0');
-    $(this).mouseup(function(){
-      $(this).css('border', '1px solid')
-      .css('border-radius', '15%')
-      .css('box-shadow', '3px 3px 3px gray');
-    });
-  });
-  $('#arrowup').mousedown(function() {
-    $(this).css('border', '1px solid')
-    .css('border-radius', '15%')
-    .css('box-shadow', '3px 3px 3px gray');
-    $(this).mouseup(function(){
-      $(this).css('border', '1px solid')
-      .css('border-radius', '15%')
-      .css('box-shadow', '3px 3px 3px gray');
-    });
-  });
+  //...
+
+  pressDown('nav img');
   $dropDown.hide();
   $('.menu-icon').click(function() {
     $dropDown.slideToggle(350);
   });
-  $('#american').change(function() {
-    id = $("#american option:selected").attr('data-name');
-    var history = searchArray();
-    $('.before').addClass('after');
-    $('.after').html(history);
-  });
-  $('#national').change(function() {
-    id = $("#national option:selected").attr('data-name');
-    var history = searchArray();
-    $('.before').addClass('after');
-    $('.after').html(history);
-  });
+  hoverOver('#dropdown img:first', 'images/githubhover.png', 'images/github.png');
+  hoverOver('#dropdown img:eq(1)', 'images/emailhover.png', 'images/email.png');
+  hoverOver('#dropdown img:eq(2)', 'images/facebookhover.png', 'images/facebook.png');
+  hoverOver('#dropdown img:last', 'images/linkedinhover.png', 'images/linkedin.png');
+
+  teamSelection('#american');
+  teamSelection('#national');
+
+  pressDown('#arrowup');
 });
 
 
