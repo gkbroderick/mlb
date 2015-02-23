@@ -9,12 +9,22 @@ body {
   letter-spacing: .05em;
 }
 
+/* this is a responsive image hack but be careful in that it requires the image be
+constrained within a parent element / container in order for it to work.
+I.e. use <figure> */
+img {
+  width: 100%;
+  display: block;
+}
+
 /* Header */
 
 header {
   background-color: #f2f2f2;
   opacity: .9;
   color: #3f403b;
+/* rather than attach a background color to your full header,
+attach this the the child elements-- helps with having non-fixed elements*/
   width: 100%;
   padding: 0.5em 0 1em 1.5em;
   font-size:.8em;
@@ -32,11 +42,14 @@ span {
 }
 nav img,
 #dropdown {
-  position: absolute;
+  /* position: absolute;
+   this absolute positioning will cause problems for responsiveness later
+   As long as the header is fixed there shouldn't be a huge need for it. You'll need to
+   layout your nav items a bit more precisely, though.*/
 }
  nav img {
   width: 2.5em;
-  height: 2.5em;
+  /*height: 2.5em; Avoid declaring img heights*/
   border: 1px solid;
   border-radius: 50%;
   box-shadow: 3px 3px 3px gray;
@@ -47,13 +60,14 @@ nav img,
   width: 8%;
   background: #f2f2f2;
   border-radius: 0 0 0 5%;
-  float: right;
+  /*float: right; Take this out
+  and solve a lot of your dropdown layout headaches*/
   left: 92em;
 }
 #dropdown img {
   width: 2em;
   height: 2em;
-}
+} /* You seem to be overselecting these images a bit*/
 #dropdown li {
   list-style: none;
   margin: .5em 0 1em 0;
@@ -75,7 +89,7 @@ nav img,
 }
 .banner img {
   width: 90em;
-  height: 35em;
+  height: 35em; /*Make these & and it will help with responsiveness*/
   position: relative;
 }
 .banner h2 {
@@ -84,7 +98,7 @@ nav img,
   z-index: 99;
 }
 .dots {
-  position: absolute;
+  position: absolute; /*These you'll probably need to change position with a media query*/
   left: 7.5em;
   right: 0;
   bottom: 20px;
@@ -153,6 +167,8 @@ img {
 .image-2 {
   float: right;
 }
+/*For responsive, avoid mixing different float directions. Pick one (generally left)
+and use slices of 100% width to do the layout*/
 .image-2 {
   margin-top: 1em;
 }
